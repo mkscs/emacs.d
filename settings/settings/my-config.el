@@ -55,9 +55,5 @@
 ;; Auto-refresh dired on file change
 (add-hook 'dired-mode-hook 'auto-revert-mode)
 
-;; auto-save buffer
-(require 'auto-save-buffers)
-(run-with-idle-timer 3 t 'auto-save-buffers)
-
 (provide 'my-config)
 
