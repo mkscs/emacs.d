@@ -12,6 +12,7 @@
       'company
       'projectile
       'flycheck
+      'multi-term
       'dash-at-point
       'multiple-cursors
       'ob-mongo
@@ -20,8 +21,10 @@
       'terraform-mode
       'puppet-mode
       'slim-mode
+      'go-mode
       'sass-mode
       'coffee-mode
+      'yaml-mode
 	    'robe
 	    'json-mode
 	    ))

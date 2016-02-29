@@ -52,5 +52,8 @@
 (setq-default tab-width 2)
 (setq-default indent-tabs-mode nil)
 
+;; Auto-refresh dired on file change
+(add-hook 'dired-mode-hook 'auto-revert-mode)
+
 (provide 'my-config)
 
