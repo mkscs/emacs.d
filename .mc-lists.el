@@ -3,10 +3,12 @@
 
 (setq mc/cmds-to-run-for-all
       '(
+        org-beginning-of-line
+        org-end-of-line
+        org-self-insert-command
         ))
 
 (setq mc/cmds-to-run-once
       '(
         coffee-dedent-line-backspace
-        org-self-insert-command
         ))

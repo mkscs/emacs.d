@@ -10,7 +10,8 @@
 (set-fringe-mode 0)
 
 ;; require theme
-(require 'base16-railscasts-dark-theme)
+(require 'atom-one-dark-theme)
+
 
 ;; set captures dir
 (setq org-default-notes-file (expand-file-name  "~/Dropbox/emacs/notes/notes.org"))
@@ -19,9 +20,6 @@
 (when (display-graphic-p)
   (set-frame-font "Menlo Regular-12"))
 
-;; turn on line numbers globally
-(global-linum-mode 1)
-(setq linum-format "%4d ")
 
 ;; lighten comments
 (set-face-attribute 'font-lock-comment-face nil :foreground "#6e7e98")
@@ -38,8 +36,8 @@
 
 ;; Set cursor color to white
 (set-cursor-color "#ffffff")
-(set-face-attribute 'isearch nil :foreground "#da4939" :background "white")
-(set-face-attribute 'lazy-highlight nil :foreground "#b6b3eb" :background "white")
+(set-face-attribute 'isearch nil :foreground "white" :background "#359D84")
+(set-face-attribute 'lazy-highlight nil :foreground "#FDE150" :background "#ED8979")
 
 ;; disable vertical-border - set to railscast dark theme background
 (set-face-attribute 'vertical-border nil :foreground "#2b2b2b")
@@ -48,6 +46,8 @@
 (show-paren-mode t)
 (column-number-mode t)
 
+;; limit line length at 80
+(add-hook 'dired-mode-hook (lambda () (set (make-local-variable 'whitespace-mode) nil)))
 ;; enable tabs
 (setq-default tab-width 2)
 (setq-default indent-tabs-mode nil)

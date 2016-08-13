@@ -11,14 +11,19 @@
 (global-set-key "\C-cd" 'dash-at-point)
 (global-set-key "\C-ce" 'dash-at-point-with-docset)
 
+;; project-explorer-open (opens a tree like structure for current dir)
+(global-set-key (kbd "\C-xp") 'project-explorer-open)
+
 ;; C-cc for captures
 (define-key global-map "\C-cc" 'org-capture)
 
 ;; multiple-cursors
 (global-set-key (kbd "C-c C-l") 'mc/edit-lines)
-(global-set-key (kbd "C-c C->") 'mc/mark-all-like-this-dwim)
+(global-set-key (kbd "C-c m d") 'mc/mark-all-like-this-dwim)
 (global-set-key (kbd "C->") 'mc/mark-next-like-this)
 (global-set-key (kbd "C-<") 'mc/mark-previous-like-this)
+(global-set-key (kbd "C-c >") 'mc/unmark-next-like-this)
+(global-set-key (kbd "C-c <") 'mc/unmark-previous-like-this)
 
 
 (provide 'my-keybindings)
